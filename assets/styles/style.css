@@ -17,13 +17,13 @@ nav {
   overflow: hidden;
 }
 
+/* dropdown button styles */
 .dropdown_btn {
   border: none;
   outline: none;
-  color: white;
-  background-color: #E88137;
-  border-radius: 9px;
-  padding: 14px 16px;
+  color: #E88137;
+  background-color: white;
+  font-size: 40px;
 }
 
 /* Dropdown content (hidden by default) */
