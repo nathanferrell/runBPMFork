@@ -1,10 +1,12 @@
+/* general body styles */
 body {
   color: black;
   font-family: sans-serif, "Times New Roman", Tahoma;
   font-size: 15px;
 }
 
-nav {
+/* general menu styles */
+menu {
   color: black;
   font-family: sans-serif, "Times New Roman", Tahoma;
   font-size: 22px;
@@ -13,6 +15,7 @@ nav {
   line-height: 120%;
 }
 
+/* general h1 styles */
 h1 {
   color: #E88137;
   text-align: center;
@@ -23,6 +26,7 @@ h1 {
   line-height: 80%; 
 }
 
+/* general h3 styles */
 h3 {
   color: #000;
   text-align: center;
@@ -34,6 +38,7 @@ h3 {
   margin-top: -60px;
 }
 
+/* general button styles */
 button {
   background-color: #E88137;
   font-size: 27px;
@@ -48,11 +53,13 @@ button {
   margin-left: 20px;
 }
 
+/* spotify login button style - SPECIFIC */
 .spotify-login {
   background-color: black;
   font-size: 20px;
 }
 
+/* general button hover styles */
 button:hover {
   opacity: 85%;
   
