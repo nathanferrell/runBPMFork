@@ -147,3 +147,14 @@ button:hover {
   padding-bottom: 25px;
   
 }
+
+/* search input style */
+input {
+  width: 1055px;
+  height: 45px;
+  margin-left: 45px;
+  border-radius: 245px;
+  stroke-width: 3px;
+  stroke: #000;
+  font-size: 19px;
+}
