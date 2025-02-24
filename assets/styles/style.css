@@ -16,6 +16,23 @@ nav {
   float: left;
   overflow: hidden;
 }
+.home-btn {
+  text-decoration: none;
+  background-color: #E88137;
+  color: white;
+  font-size: 22px;
+  font-family: sans-serif, "Times New Roman", Tahoma;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-left: 10px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  opacity: 85%;
+}
 
 /* dropdown button styles */
 .dropdown_btn {
