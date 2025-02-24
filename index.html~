@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
 
   <!-- title -->
-  <title>Search For a Song</title>
+  <title>runBPM</title>
 </head>
 <body>
   <!-- nav -->
@@ -25,22 +25,28 @@
         <a href="playlist.html">Create a Playlist</a>
         <a href="idea.html">The Idea</a>
         <a href="team.html">Meet the Team</a>
-        <a href="mailto:nferrell@luc.edu">Contact Us</a>
+        <a href="index.html">Contact Us</a>
     </div>
   </nav>
-  <header> <h1>runBPM</h1></header>
 
-  <!-- search input -->
-  <section id ="search-tracks">
-    <input type="text" id="search-input">
-    <button type="button" id="search">
-      Search
+  <!-- title card -->
+  <h1>runBPM</h1>
+  <h3>The athlete's go-to BPM finder.</h3>
+
+  <!-- homepage buttons -->
+<section class="button-container">
+  <a href="search.html">
+    <button>Search for a Song</button>
+  </a>
+  <a href="playlist.html">
+    <button>Create a Playlist</button>
+  </a>
+  <a href="index.html">
+    <button class="spotify-login">
+      <img src="media/images/spotify-logo.png" alt="spotify-logo" width="21px" height="21px"> Login with Spotify
     </button>
-  </section>
-
-  <!-- search output -->
-  <section class ="search-output">
-  </section>
+  </a>
+ </section>
 
   <footer>
     <p>
@@ -48,8 +54,8 @@
     </p>
   </footer>
 
-<!--- js scripts -->
-<script type="text/javascript" src="assets/scripts/runbpm.js"></script>
+  <!--- js scripts -->
+  <script type="text/javascript" src="assets/scripts/runbpm.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,186 @@
+/* general body styles */
+body {
+  color: black;
+  font-family: sans-serif, "Times New Roman", Tahoma;
+  font-size: 15px;
+}
+
+/* general menu styles */
+nav {
+  color: black;
+  font-family: sans-serif, "Times New Roman", Tahoma;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  float: left;
+  overflow: hidden;
+}
+
+/* dropdown button styles */
+.dropdown_btn {
+  border: none;
+  outline: none;
+  color: #E88137;
+  background-color: white;
+  font-size: 40px;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  pointer-events: auto;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+nav:hover .dropdown-content {
+  display: block;
+}
+
+
+/* general h1 styles */
+h1 {
+  color: #E88137;
+  text-align: center;
+  font-family: "Faster One", sans-serif, "Times New Roman", Tahoma;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 80%; 
+}
+
+/* general h3 styles */
+h3 {
+  color: #000;
+  text-align: center;
+  font-family: sans-serif, "Times New Roman", Tahoma;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 80%;
+  margin-top: -60px;
+}
+
+h4 {
+  color:#2b1897;
+  text-align: center;
+  font-family: sans-serif, "Times New Roman", Tahoma;
+  font-size: 40px;
+  text-decoration: underline;
+  line-height: 80%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+#search-tracks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust spacing as needed */
+}
+
+
+
+
+.message {
+  text-align: center;
+  font-family: sans-serif, "Times New Roman", Tahoma;
+  font-size: 22px;
+  padding-left: 200px;
+  padding-right: 200px;
+
+}
+
+.text {
+  color:#2b1897;
+  font-family: sans-serif, "Times New Roman", Tahoma;
+  padding-left: 20px;
+  font-size: 35px;
+}
+
+.about {
+  color: #464343;
+  font-family: sans-serif, "Times New Roman", Tahoma;
+  font-size: 18px;
+
+}
+
+/* general button styles */
+button {
+  background-color: #E88137;
+  font-size: 27px;
+  color: white;
+  font-family: sans-serif, "Times New Roman", Tahoma;
+  border: 0cm;
+  border-radius: 9px;
+  align-content: center;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between buttons */
+  margin-top: 20px; /* Adjust spacing from title */
+}
+
+
+/* spotify login button style - SPECIFIC */
+.spotify-login {
+  background-color: black;
+  font-size: 20px;
+}
+
+/* general button hover styles */
+button:hover {
+  opacity: 85%;
+  
+}
+
+.temp_pic {
+  display: flex;
+  padding-left: 375px;
+  padding-bottom: 25px;
+  
+}
+
+/* search input style */
+input {
+  width: 1055px;
+  height: 45px;
+  margin-left: 45px;
+  border-radius: 245px;
+  stroke-width: 3px;
+  stroke: #000;
+  font-size: 19px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 150%;
+}

@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
 
   <!-- title -->
-  <title>Search For a Song</title>
+  <title>The Idea</title>
 </head>
 <body>
   <!-- nav -->
@@ -22,25 +22,13 @@
       <div class ="dropdown-content">
         <a href="index.html">Home</a>
         <a href="search.html">Search for a Song</a>
-        <a href="playlist.html">Create a Playlist</a>
+        <a href="index.html">Create a Playlist</a>
         <a href="idea.html">The Idea</a>
         <a href="team.html">Meet the Team</a>
-        <a href="mailto:nferrell@luc.edu">Contact Us</a>
+        <a href="index.html">Contact Us</a>
     </div>
   </nav>
   <header> <h1>runBPM</h1></header>
-
-  <!-- search input -->
-  <section id ="search-tracks">
-    <input type="text" id="search-input">
-    <button type="button" id="search">
-      Search
-    </button>
-  </section>
-
-  <!-- search output -->
-  <section class ="search-output">
-  </section>
 
   <footer>
     <p>
@@ -48,8 +36,7 @@
     </p>
   </footer>
 
-<!--- js scripts -->
-<script type="text/javascript" src="assets/scripts/runbpm.js"></script>
-
 </body>
-</html>
+
+
+
