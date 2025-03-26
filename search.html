@@ -31,17 +31,34 @@
   </nav>
   <header> <h1>runBPM</h1></header>
 
-  <!-- search input -->
-  <section id ="search-tracks">
-    <input type="text" id="search-input">
-    <button type="button" id="search">
-      Search
-    </button>
-  </section>
+  <!-- Search input section -->
+<section id="search-tracks">
+  <label for="search-type">Search by:</label>
+  <select id="search-type">
+    <option value="song">Song Name</option>
+    <option value="bpm">BPM</option>
+  </select>
 
-  <!-- search output -->
-  <section class ="search-output">
-  </section>
+  <input type="text" id="search-input" placeholder="Enter song name or BPM">
+
+  <!-- Genre filter dropdown (only applies to BPM searches) -->
+  <label for="genre-select">Preferred Genre (optional):</label>
+  <select id="genre-select">
+    <option value="">Any Genre</option>
+    <option value="rock">Rock</option>
+    <option value="pop">Pop</option>
+    <option value="hip hop">Hip-Hop</option>
+    <option value="electronic">Electronic</option>
+    <option value="jazz">Jazz</option>
+  </select>
+
+  <button type="button" id="search">Search</button>
+</section>
+
+<!-- Search output section -->
+<section class="search-output"></section>
+
+
 
   <footer>
     <p>
