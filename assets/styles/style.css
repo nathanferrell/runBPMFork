@@ -1,8 +1,36 @@
+header {
+  display: flex;  /* Add flexbox to center content */
+  justify-content: center;  /* Center content horizontally */
+  align-items: center; 
+  background-color: lightslategray;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5px 20px;  /* Reduced padding */
+  height: 60px;  /* Set fixed height to make header smaller */
+}
+
+.logo {
+  font-style: italic;
+  color: #E88137;
+  font-family: "Faster One", sans-serif, "Times New Roman", Tahoma;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
 /* general body styles */
 body {
   color: black;
   font-family: sans-serif, "Times New Roman", Tahoma;
   font-size: 15px;
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
 }
 
 /* general menu styles */
@@ -16,6 +44,7 @@ nav {
   float: left;
   overflow: hidden;
 }
+
 .home-btn {
   text-decoration: none;
   background-color: #E88137;
@@ -74,17 +103,6 @@ nav:hover .dropdown-content {
 }
 
 
-/* general h1 styles */
-h1 {
-  color: #E88137;
-  text-align: center;
-  font-family: "Faster One", sans-serif, "Times New Roman", Tahoma;
-  font-size: 96px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 80%; 
-}
-
 /* general h3 styles */
 h3 {
   color: #000;
@@ -112,6 +130,57 @@ h4 {
   justify-content: center;
   align-items: center;
   margin-top: 20px; /* Adjust spacing as needed */
+  border-radius: 10px;
+}
+
+.recommended-songs {
+  text-align: center;
+}
+
+.song-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Increased space between song cards */
+  align-items: center;
+}
+
+.song-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b5aec4;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align text vertically */
+  text-align: left;
+}
+
+.song-info h2 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.song-info p {
+  font-size: 16px;
+  margin: 5px 0 0;
+}
+
+.song-bpm {
+  text-align: right;
+}
+
+.song-bpm p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
 }
 
 /* dropdown button style */
@@ -124,8 +193,6 @@ h4 {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
-
 
 
 .message {
@@ -184,14 +251,12 @@ button {
 /* general button hover styles */
 button:hover {
   opacity: 85%;
-  
 }
 
 .temp_pic {
   display: flex;
   padding-left: 375px;
   padding-bottom: 25px;
-  
 }
 
 /* search input style */
@@ -206,8 +271,9 @@ input {
 }
 
 footer {
-    position: fixed;
+    position: static;
+    text-align: center;
     bottom: 0;
     width: 100%;
-    font-size: 150%;
+    font-size: 60%;
 }
