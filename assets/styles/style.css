@@ -114,6 +114,17 @@ h4 {
   margin-top: 20px; /* Adjust spacing as needed */
 }
 
+/* dropdown button style */
+#search-type, #genre-select {
+  padding: 8px 12px;
+  border: 2px solid #E88137;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
 
 
 
