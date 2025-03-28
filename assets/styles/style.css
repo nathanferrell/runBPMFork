@@ -154,13 +154,6 @@ h4 {
   margin-top: 20px;
   margin-bottom: 50px;
 }
-#search-tracks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px; /* Adjust spacing as needed */
-  border-radius: 10px;
-}
 
 .recommended-songs {
   text-align: center;
@@ -212,17 +205,65 @@ h4 {
   margin: 0;
 }
 
-/* dropdown button style */
-#search-type, #genre-select {
-  padding: 8px 12px;
-  border: 2px solid #E88137;
-  border-radius: 5px;
-  background-color: #f8f9fa;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+#search-tracks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
+#search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1px;
+  align-items: center;
+}
+
+#search-input {
+  max-width: 750px; 
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+  border-color: #E88137; /* Green border on focus */
+}
+
+#search-input::placeholder {
+  color: #888;
+}
+
+#search {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+#filter-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 1px;
+  align-items: center;
+}
+
+/* dropdown button style */
+#search-type, #genre-select {
+  display: flex;
+  padding: 2px 2px;
+  border: 2px solid #E88137;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1px;
+  align-items: center;
+}
 
 .message {
   text-align: center;
