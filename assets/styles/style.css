@@ -341,7 +341,7 @@ input {
 }
 
 footer {
-    position: static;
+    position: fixed;
     text-align: center;
     bottom: 0;
     width: 100%;
