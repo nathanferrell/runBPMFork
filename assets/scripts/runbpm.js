@@ -138,36 +138,4 @@ function displayResults(songs, output) {
         const bpm = song.tempo ? `${song.tempo} BPM` : "BPM not available";
 
         const songCard = document.createElement("div");
-        songCard.classList.add("song-card"); // Apply .song-card class
-
-        // Create song info
-        const songInfo = document.createElement("div");
-        songInfo.classList.add("song-info"); // Apply .song-info class
-
-        songInfo.innerHTML = `
-            <h2>${songTitle}</h2>
-            <p>${artistName}</p>
-        `;
-
-        // Create song bpm info
-        const songBpm = document.createElement("div");
-        songBpm.classList.add("song-bpm"); // Apply .song-bpm class
-
-        songBpm.innerHTML = `
-            <p>${bpm}</p>
-        `;
-
-        // Append song info and bpm info to the song card
-        songCard.appendChild(songInfo);
-        songCard.appendChild(songBpm);
-
-        // Append song card to the results list
-        resultsList.appendChild(songCard);
-    });
-
-    output.appendChild(resultsList);
-}
-
-// Load app
-songSearch();
-
+        s
