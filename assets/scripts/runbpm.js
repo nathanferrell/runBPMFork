@@ -6,13 +6,16 @@ function songSearch() {
   let searchBtn = document.getElementById('search');
   let searchInput = document.getElementById('search-input');
   let searchType = document.getElementById('search-type'); // Dropdown for search type
+  let recommendedSongsSection = document.querySelector('.recommended-songs');
 
   searchBtn.addEventListener('click', () => {
+    recommendedSongsSection.style.display = 'none';
     createSearch(searchInput, searchType, searchOutput);
   });
 
   searchInput.addEventListener('keypress', (e) => {
     if (e.keyCode === 13) {
+      recommendedSongsSection.style.display = 'none';
       createSearch(searchInput, searchType, searchOutput);
     }
   });
@@ -44,7 +47,7 @@ function createSearch(input, typeSelector, output) {
 
 // Function to fetch songs by name
 async function fetchSongsByName(songName, output) {
-  const apiKey = "INSERT HERE"; // Replace with valid API key
+  const apiKey = "cfa8277e29f63f7be650503e6fbf5bce"; // Replace with valid API key
   const url = `https://api.getsong.co/search/?api_key=${apiKey}&type=song&lookup=${encodeURIComponent(songName)}`;
 
   try {
@@ -73,7 +76,7 @@ async function fetchSongsByName(songName, output) {
 }
 
 async function fetchSongsByBPM(bpm, output) {
-    const apiKey = "INSERT HERE"; // Replace with valid API key
+    const apiKey = "cfa8277e29f63f7be650503e6fbf5bce"; // Replace with valid API key
     const genreFilter = document.getElementById("genre-select").value; // Get selected genre
     const url = `https://api.getsong.co/tempo/?api_key=${apiKey}&bpm=${bpm}`;
 
@@ -123,8 +126,10 @@ async function fetchSongsByBPM(bpm, output) {
 function displayResults(songs, output) {
     output.innerHTML = "<h2>Search Results</h2>";
 
-    const resultsList = document.createElement("ul");
-    resultsList.classList.add("results-list");
+    output.classList.add("recommended-songs");
+
+    const resultsList = document.createElement("div");
+    resultsList.classList.add("song-list");
 
     songs.forEach(song => {
         // Handle title variations between song search & BPM search
@@ -132,11 +137,32 @@ function displayResults(songs, output) {
         const artistName = song.artist && song.artist.name ? song.artist.name : "Unknown Artist";
         const bpm = song.tempo ? `${song.tempo} BPM` : "BPM not available";
 
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `
-            <strong>${songTitle}</strong> by <em>${artistName}</em> - ${bpm}
+        const songCard = document.createElement("div");
+        songCard.classList.add("song-card"); // Apply .song-card class
+
+        // Create song info
+        const songInfo = document.createElement("div");
+        songInfo.classList.add("song-info"); // Apply .song-info class
+
+        songInfo.innerHTML = `
+            <h2>${songTitle}</h2>
+            <p>${artistName}</p>
         `;
-        resultsList.appendChild(listItem);
+
+        // Create song bpm info
+        const songBpm = document.createElement("div");
+        songBpm.classList.add("song-bpm"); // Apply .song-bpm class
+
+        songBpm.innerHTML = `
+            <p>${bpm}</p>
+        `;
+
+        // Append song info and bpm info to the song card
+        songCard.appendChild(songInfo);
+        songCard.appendChild(songBpm);
+
+        // Append song card to the results list
+        resultsList.appendChild(songCard);
     });
 
     output.appendChild(resultsList);
