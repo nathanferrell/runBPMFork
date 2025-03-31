@@ -47,7 +47,7 @@ function createSearch(input, typeSelector, output) {
 
 // Function to fetch songs by name
 async function fetchSongsByName(songName, output) {
-  const apiKey = "cfa8277e29f63f7be650503e6fbf5bce"; // Replace with valid API key
+  const apiKey = "INSERT KEY"; // Replace with valid API key
   const url = `https://api.getsong.co/search/?api_key=${apiKey}&type=song&lookup=${encodeURIComponent(songName)}`;
 
   try {
@@ -76,7 +76,7 @@ async function fetchSongsByName(songName, output) {
 }
 
 async function fetchSongsByBPM(bpm, output) {
-    const apiKey = "cfa8277e29f63f7be650503e6fbf5bce"; // Replace with valid API key
+    const apiKey = "INSERT KEY"; // Replace with valid API key
     const genreFilter = document.getElementById("genre-select").value; // Get selected genre
     const url = `https://api.getsong.co/tempo/?api_key=${apiKey}&bpm=${bpm}`;
 
