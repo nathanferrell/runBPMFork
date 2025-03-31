@@ -47,7 +47,7 @@ function createSearch(input, typeSelector, output) {
 
 // Function to fetch songs by name
 async function fetchSongsByName(songName, output) {
-  const apiKey = "INSERT KEY"; // Replace with valid API key
+  const apiKey = "cfa8277e29f63f7be650503e6fbf5bce"; // Replace with valid API key
   const url = `https://api.getsong.co/search/?api_key=${apiKey}&type=song&lookup=${encodeURIComponent(songName)}`;
 
   try {
@@ -76,7 +76,7 @@ async function fetchSongsByName(songName, output) {
 }
 
 async function fetchSongsByBPM(bpm, output) {
-    const apiKey = "INSERT KEY"; // Replace with valid API key
+    const apiKey = "cfa8277e29f63f7be650503e6fbf5bce"; // Replace with valid API key
     const genreFilter = document.getElementById("genre-select").value; // Get selected genre
     const url = `https://api.getsong.co/tempo/?api_key=${apiKey}&bpm=${bpm}`;
 
@@ -138,4 +138,36 @@ function displayResults(songs, output) {
         const bpm = song.tempo ? `${song.tempo} BPM` : "BPM not available";
 
         const songCard = document.createElement("div");
-        s
+        songCard.classList.add("song-card"); // Apply .song-card class
+
+        // Create song info
+        const songInfo = document.createElement("div");
+        songInfo.classList.add("song-info"); // Apply .song-info class
+
+        songInfo.innerHTML = `
+            <h2>${songTitle}</h2>
+            <p>${artistName}</p>
+        `;
+
+        // Create song bpm info
+        const songBpm = document.createElement("div");
+        songBpm.classList.add("song-bpm"); // Apply .song-bpm class
+
+        songBpm.innerHTML = `
+            <p>${bpm}</p>
+        `;
+
+        // Append song info and bpm info to the song card
+        songCard.appendChild(songInfo);
+        songCard.appendChild(songBpm);
+
+        // Append song card to the results list
+        resultsList.appendChild(songCard);
+    });
+
+    output.appendChild(resultsList);
+}
+
+// Load app
+songSearch();
+
