@@ -67,7 +67,7 @@ async function fetchSongsByName(songName, output) {
     }
 
     // Get the top 5 results
-    const topResults = data.search.slice(0, 5);
+    const topResults = data.search.slice(0, 25);
     displayResults(topResults, output);
   } catch (error) {
     console.error("Error fetching song data:", error);
