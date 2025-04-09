@@ -116,6 +116,15 @@ nav > .dropdown-menu:hover + .dropdown-content {
   opacity: 80%;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* media query to show menu on smaller screens */
 @media (max-width: 768px) {
   .dropdown-menu {
