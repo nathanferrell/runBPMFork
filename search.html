@@ -16,98 +16,98 @@
   <title>Search For a Song</title>
 </head>
 <body>
+  <div class="page-wrapper">
 
-  <!-- header -->
-  <header class="header">
-    <nav>
-      <div class="dropdown">
-        <button class="dropdown-menu">&#9776;</button>
-        <div class="dropdown-content">
-          <a href="search.html">Home</a>
-          <a href="playlist.html">Create a Playlist</a>
-          <a href="idea.html">The Idea</a>
-          <a href="team.html">Meet the Team</a>
-          <a href="mailto:nferrell@luc.edu">Contact Us</a>
+    <!-- header -->
+    <header class="header">
+      <nav>
+        <div class="dropdown">
+          <button class="dropdown-menu">&#9776;</button>
+          <div class="dropdown-content">
+            <a href="search.html">Home</a>
+            <a href="playlist.html">Create a Playlist</a>
+            <a href="idea.html">The Idea</a>
+            <a href="team.html">Meet the Team</a>
+            <a href="mailto:nferrell@luc.edu">Contact Us</a>
+          </div>
         </div>
+        <a href="search.html" class="home-btn">Home</a>
+      </nav>
+      <div class="logo-container">
+        <h1 class="logo">runBPM</h1>
       </div>
-      <a href="search.html" class="home-btn">Home</a>
-    </nav>
-    <div class="logo-container">
-      <h1 class="logo">runBPM</h1>
-    </div>
-  </header>  
+    </header>  
 
-<!-- Search input section -->
-<section id="search-tracks">
+    <!-- Search input section -->
+    <section id="search-tracks">
 
-  <div id="search-container">
-    <input type="text" id="search-input" placeholder="Enter song name or BPM">
-    <button type="button" id="search">Search</button>
+      <div id="search-container">
+        <input type="text" id="search-input" placeholder="Enter song name or BPM">
+        <button type="button" id="search">Search</button>
+      </div>
+
+     <div id="filter-container">
+      <label for="search-type">Search by:</label>
+      <select id="search-type">
+        <option value="song">Song Name</option>
+        <option value="bpm">BPM</option>
+      </select>
+
+        <label for="genre-select">Preferred Genre (optional):</label>
+        <select id="genre-select">
+          <option value="">Any Genre</option>
+          <option value="rock">Rock</option>
+          <option value="pop">Pop</option>
+          <option value="hip hop">Hip-Hop</option>
+          <option value="electronic">Electronic</option>
+          <option value="jazz">Jazz</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- team recomendations -->
+    <section class="recommended-songs">
+      <h2>Need a starting point? Here are some of the team's favorite songs!</h2>
+      <div class="song-list">
+        <div class="song-card">
+          <div class="song-info">
+            <h2>Diva - Homecoming Live</h2>
+            <p>Beyoncé</p>
+          </div>
+          <div class="song-bpm">
+            <p>146 BPM</p>
+          </div>
+        </div>
+      
+        <div class="song-card">
+          <div class="song-info">
+            <h2>Don't Want You Back</h2>
+            <p>Backstreet Boys</p>
+          </div>
+          <div class="song-bpm">
+            <p>103 BPM</p>
+          </div>
+        </div>
+      
+        <div class="song-card">
+          <div class="song-info">
+            <h2>Toxic</h2>
+            <p>Britney Spears</p>
+          </div>
+          <div class="song-bpm">
+            <p>143 BPM</p>
+          </div>
+        </div>
+      </div>  
+    </section>
+
+    <!-- Search output section -->
+    <section class="search-output"></section>
+
+    <footer>
+      <p>Copyright runBPM, 2025.</p>
+      </footer>
   </div>
-
-  <div id="filter-container">
-    <label for="search-type">Search by:</label>
-    <select id="search-type">
-      <option value="song">Song Name</option>
-      <option value="bpm">BPM</option>
-    </select>
-
-    <label for="genre-select">Preferred Genre (optional):</label>
-    <select id="genre-select">
-      <option value="">Any Genre</option>
-      <option value="rock">Rock</option>
-      <option value="pop">Pop</option>
-      <option value="hip hop">Hip-Hop</option>
-      <option value="electronic">Electronic</option>
-      <option value="jazz">Jazz</option>
-    </select>
-  </div>
-</section>
-
-<!-- team recomendations -->
-<section class="recommended-songs">
-  <h2>Need a starting point? Here are some of the team's favorite songs!</h2>
-  <div class="song-list">
-    <div class="song-card">
-      <div class="song-info">
-        <h2>Diva - Homecoming Live</h2>
-        <p>Beyoncé</p>
-      </div>
-      <div class="song-bpm">
-        <p>146 BPM</p>
-      </div>
-    </div>
-  
-    <div class="song-card">
-      <div class="song-info">
-        <h2>Don't Want You Back</h2>
-        <p>Backstreet Boys</p>
-      </div>
-      <div class="song-bpm">
-        <p>103 BPM</p>
-      </div>
-    </div>
-  
-    <div class="song-card">
-      <div class="song-info">
-        <h2>Toxic</h2>
-        <p>Britney Spears</p>
-      </div>
-      <div class="song-bpm">
-        <p>143 BPM</p>
-      </div>
-    </div>
-  </div>  
- </section>
-
-<!-- Search output section -->
-<section class="search-output"></section>
-
-  <footer>
-    <p>
-      Copyright runBPM, 2025.
-    </p>
-  </footer>
 
 <!--- js scripts -->
 <script type="text/javascript" src="assets/scripts/runbpm.js"></script>
