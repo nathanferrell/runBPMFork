@@ -159,9 +159,12 @@ h3 {
 
 .song-list {
   display: flex;
-  flex-direction: column;
-  gap: 10px; /* Increased space between song cards */
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
   align-items: center;
+  width: 100%;
 }
 
 .song-card {
@@ -213,13 +216,17 @@ h3 {
 
 #search-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 1px;
+  justify-content: center;
+  margin-bottom: 10px;
   align-items: center;
+  width: 100%;
 }
 
 #search-input {
-  max-width: 750px; 
+  flex: 1 1 300px;
+  width: 100%;
   padding: 10px;
   font-size: 16px;
   border: 2px solid #ccc;
@@ -227,6 +234,8 @@ h3 {
   outline: none;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
+  max-width: 750px;
+  min-width: 0;
 }
 
 #search-input:focus {
@@ -244,9 +253,12 @@ h3 {
 
 #filter-container {
   display: flex;
-  gap: 15px;
-  margin-top: 1px;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
   align-items: center;
+  width: 100%;
 }
 
 /* dropdown button style */
@@ -307,13 +319,6 @@ button {
   align-items: center;
   gap: 20px; /* Adjust spacing between buttons */
   margin-top: 20px; /* Adjust spacing from title */
-}
-
-
-/* spotify login button style - SPECIFIC */
-.spotify-login {
-  background-color: black;
-  font-size: 20px;
 }
 
 /* general button hover styles */
