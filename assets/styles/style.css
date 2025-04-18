@@ -1,10 +1,25 @@
+:root { /*standard-light mode */
+  --background-color: #ffffff;
+  --primary-color: #E88137;
+  --text-color: black;
+  --secondary-color: #eee;
+}
+
+.dark-mode {
+  --background-color: #2d2d2d;
+  --primary-color: #E88137;
+  --text-color: #ffffff;
+  --secondary-color: #414141;
+  --accent-color: #eee;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #eee;
+  background-color: var(--secondary-color);
   text-align: center;
-  width: 100%;
+  width: 98%;
   position: fixed;
   top: 0;
   left: 0;
@@ -20,7 +35,7 @@ header {
 
 .logo {
   font-style: italic;
-  color: #E88137;
+  color: var(--primary-color);
   font-family: "Faster One", sans-serif, "Times New Roman", Tahoma;
   font-size: 40px;
   font-weight: 400;
@@ -28,9 +43,34 @@ header {
   text-align: center;
 }
 
+/* icon styles */
+.icon-sun {
+  display: none;
+  fill: var(--accent-color);
+}
+
+.icon-moon {
+  fill: var(--secondary-color);
+}
+
+.dark-mode .icon-moon {
+  display: none;
+}
+
+.dark-mode .icon-sun {
+  display: inline;
+  
+}
+
+#dark-mode {
+  font-size: 20px;
+  border-radius: 50%;
+}
+
 /* general body styles */
 body {
-  color: black;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: sans-serif, "Times New Roman", Tahoma;
   font-size: 15px;
   padding-top: 60px;
@@ -38,7 +78,7 @@ body {
 
 /* general menu styles */
 nav {
-  color: black;
+  color: var(--text-color);
   font-family: sans-serif, "Times New Roman", Tahoma;
   font-size: 22px;
   font-style: normal;
@@ -52,7 +92,7 @@ nav {
 .home-btn {
   text-decoration: none;
   background-color: transparent;
-  color: #E88137;
+  color: var(--primary-color);
   font-size: 20px;
   font-family: sans-serif, "Times New Roman", Tahoma;
   border: none;
@@ -67,7 +107,7 @@ nav {
 .dropdown-menu {
   border: none;
   outline: none;
-  color: #E88137;
+  color: var(--primary-color);
   background-color: transparent;
   font-size: 24px;
   cursor: pointer;
@@ -92,7 +132,7 @@ nav > *:not(.dropdown-content) {
 }
 
 .dropdown-content a {
-  color: black;
+  color: var(--text-color);
   font-size: 18px;
   padding: 12px 16px;
   text-decoration: none;
