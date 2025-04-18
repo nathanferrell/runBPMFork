@@ -1,0 +1,223 @@
+/* base styles to ensure responsiveness - setting things up */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* base scale for any images*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* styles and media queries for screens smaller than 1024px */
+@media (max-width: 1024px) {
+
+  /* aligns items in song card and message areas as left-hand columns */
+  .song-card,
+  .message p {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /* ensure bpm element spans full width with a left align and top margins */
+  .song-bpm {
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  /* shrink input width */
+  input {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  /* hides home button on smaller screen */
+  .home-btn {
+    display: none;
+  }
+}
+
+/* styles and media queries for screens smaller than 768px (mobile ideal) */
+@media (max-width: 768px) {
+  /* adjust header layout for smaller viewports */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  /* sets logo to be in the absolute center as needed */
+  .logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: 0;
+  }
+
+  /* shrink logo size to fit smaller viewports */
+  .logo {
+    font-size: 32px;
+  }
+
+  /* show nav items in horizontal row */
+  nav {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* flatten dropdown down */
+  .dropdown-content {
+    position: absolute;
+    box-shadow: none;
+  }
+
+  /* setting position for dark mode */
+  #dark-mode {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  /* ensure search bar and filters are more responsive on mobile  */
+  #search-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* improve mobile usability - fix widths, padding, border sizing, etc. */
+  #search-input {
+    width: 100%;
+    max-width: 750px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    flex-shrink: 1;
+  }
+
+  /* stacking filter options vertically with spacing - NEEDED FOR MOBILE SPACING */
+  #filter-container {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /* increase button size */
+  button {
+    font-size: 20px;
+    padding: 8px 16px;
+    margin: 10px;
+  }
+
+  /* stacking button options vertically with spacing - NEEDED FOR MOBILE SPACING */
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* shrink footer to fit mobile */
+  footer {
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+/* styles and media queries for screens smaller than 480px */
+@media (max-width: 480px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  /* resize logo */
+  .logo {
+    font-size: 24px;
+  }
+
+  /* do not display home button */
+  .home-btn {
+    display: none;
+  }
+
+  /* shrink dropdown button */
+  .dropdown-menu {
+    display: block;
+  }
+
+  /* shrink dark mode for mobile */
+  #dark-mode {
+    padding: 6px;
+    margin: 0;
+    margin-top: 10px;
+    position: absolute;
+    align-items: center;
+  }
+
+  #dark-mode svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+
+  /* shrink search bar */
+  #search {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  /* shrink filter options */
+  #search-type,
+  #genre-select {
+    font-size: 12px;
+  }
+
+  /* shrink song info tiles */
+  .song-info h2 {
+    font-size: 18px;
+  }
+
+  .song-info p,
+  .song-bpm p,
+  .message p {
+    font-size: 14px;
+  }
+
+  /* shrink input */
+  input {
+    font-size: 16px;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  /* add more padding to the song cards */
+  .song-card
+  .message p {
+    padding: 15px;
+  }
+
+  /* adjust button width */
+  button {
+    width: 100%;
+  }
+}
