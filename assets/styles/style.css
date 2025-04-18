@@ -5,6 +5,7 @@
   --secondary-color: #eee;
   --accent-color: #ddd;
   --hover-color: #ddd;
+  --visited-color: #2b1897;
 }
 
 .dark-mode {
@@ -14,6 +15,7 @@
   --secondary-color: #000;
   --accent-color: #eee;
   --hover-color: #444;
+  --visited-color: #E88137;
 }
 
 header {
@@ -183,7 +185,7 @@ nav > .dropdown-menu:hover + .dropdown-content {
 
 /* general h3 styles */
 h3 {
-  color: #000;
+  color: var(--text-color);
   text-align: center;
   font-family: sans-serif, "Times New Roman", Tahoma;
   font-size: 32px;
@@ -194,7 +196,7 @@ h3 {
 }
 
 h4 {
-  color: black;
+  color: var(--text-color);
   text-align: center;
   font-family: sans-serif, "Times New Roman", Tahoma;
   font-size: 30px;
@@ -230,9 +232,10 @@ h4 {
 }
 
 /* changing background and text color for song cards in dark mode */
-.dark-mode .song-card {
-  color: #c9c9c9;
-  background-color: #2f195e;
+.dark-mode .song-card,
+.dark-mode .message p {
+  color: var(--text-color);
+  background-color: var(--primary-color);
 }
 
 .song-info {
@@ -341,7 +344,7 @@ h4 {
 }
 
 .text {
-  color:#2b1897;
+  color:var(--visited-color);
   font-family: sans-serif, "Times New Roman", Tahoma;
   padding-left: 20px;
   font-size: 35px;
@@ -349,7 +352,7 @@ h4 {
 
 .about {
   display: flex;
-  color: #464343;
+  color: var(--text-color);
   font-family: sans-serif, "Times New Roman", Tahoma;
   font-size: 18px;
 }
@@ -390,32 +393,4 @@ button:hover {
 
 /* search input style */
 input {
-  width: 1055px;
-  height: 45px;
-  margin-left: 45px;
-  border-radius: 245px;
-  stroke-width: 3px;
-  stroke: #000;
-  font-size: 19px;
-}
-
-.message p {
-  font-size: 20px;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  background-color: #b5aec4;
-  border-radius: 12px;
-  padding: 20px;
-  width: 100%;
-}
-
-footer {
-  position: static;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 60%;
-  padding: 10px 0;
-}
+  wi

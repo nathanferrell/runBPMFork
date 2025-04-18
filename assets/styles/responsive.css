@@ -8,14 +8,14 @@
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* styles and media queries for screens smaller than 1024px */
 @media (max-width: 1024px) {
 
-  /* aligns items in song card and message areas as left-hand columns */
-  .song-card,
-  .message p {
+  /* aligns items in song card as left-hand columns */
+  .song-card {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
@@ -37,6 +37,31 @@ img {
   /* hides home button on smaller screen */
   .home-btn {
     display: none;
+  }
+
+  /* adjust font and padding for mobile idea page */
+  .message {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .message p {
+    font-size: 18px;
+    padding: 15px;
+    width: 100%;
+  }
+
+  .meet-the-team {
+    padding: 20px;
+    margin: 30px auto;
+    width: 95%;
+  }
+
+  /* resize picture */
+  .temp_pic {
+    padding-left: 10px;
+    max-width: 80%;
   }
 }
 
@@ -136,6 +161,43 @@ img {
     font-size: 10px;
     text-align: center;
   }
+
+  /* adjust font and padding for mobile idea page */
+  .message {
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .message p {
+    font-size: 16px;
+    padding: 12px;
+    width: 100%; 
+    align-content: center;
+  }
+
+  .meet-the-team {
+    margin: auto;
+    padding: 1px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* resize picture, convert to columns for mobile optimization */
+  .temp_pic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    max-width: 60%;
+  }
 }
 
 /* styles and media queries for screens smaller than 480px */
@@ -156,68 +218,4 @@ img {
   }
 
   /* do not display home button */
-  .home-btn {
-    display: none;
-  }
-
-  /* shrink dropdown button */
-  .dropdown-menu {
-    display: block;
-  }
-
-  /* shrink dark mode for mobile */
-  #dark-mode {
-    padding: 6px;
-    margin: 0;
-    margin-top: 10px;
-    position: absolute;
-    align-items: center;
-  }
-
-  #dark-mode svg {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-  }
-
-  /* shrink search bar */
-  #search {
-    font-size: 16px;
-    margin-left: 0;
-  }
-
-  /* shrink filter options */
-  #search-type,
-  #genre-select {
-    font-size: 12px;
-  }
-
-  /* shrink song info tiles */
-  .song-info h2 {
-    font-size: 18px;
-  }
-
-  .song-info p,
-  .song-bpm p,
-  .message p {
-    font-size: 14px;
-  }
-
-  /* shrink input */
-  input {
-    font-size: 16px;
-    height: auto;
-    margin: 10px 0;
-  }
-
-  /* add more padding to the song cards */
-  .song-card
-  .message p {
-    padding: 15px;
-  }
-
-  /* adjust button width */
-  button {
-    width: 100%;
-  }
-}
+  .
