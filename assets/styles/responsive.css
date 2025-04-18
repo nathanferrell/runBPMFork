@@ -14,6 +14,17 @@ img {
 /* styles and media queries for screens smaller than 1024px */
 @media (max-width: 1024px) {
 
+  /* hides home button on smaller screen */
+  .home-btn {
+    display: none;
+  }
+
+  /* shrink input width */
+  input {
+    width: 90%;
+    margin-left: 0;
+  }
+
   /* aligns items in song card as left-hand columns */
   .song-card {
     flex-direction: column;
@@ -26,17 +37,6 @@ img {
     width: 100%;
     text-align: left;
     margin-top: 10px;
-  }
-
-  /* shrink input width */
-  input {
-    width: 90%;
-    margin-left: 0;
-  }
-
-  /* hides home button on smaller screen */
-  .home-btn {
-    display: none;
   }
 
   /* adjust font and padding for mobile idea page */
@@ -88,6 +88,19 @@ img {
   /* shrink logo size to fit smaller viewports */
   .logo {
     font-size: 32px;
+  }
+
+  /* fix button size */
+  button {
+    font-size: 20px;
+    padding: 8px 16px;
+    margin: 10px;
+  }
+
+  /* stacking button options vertically with spacing - NEEDED FOR MOBILE SPACING */
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
   }
 
   /* show nav items in horizontal row */
@@ -143,25 +156,6 @@ img {
     padding: 0 10px;
   }
 
-  /* increase button size */
-  button {
-    font-size: 20px;
-    padding: 8px 16px;
-    margin: 10px;
-  }
-
-  /* stacking button options vertically with spacing - NEEDED FOR MOBILE SPACING */
-  .button-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* shrink footer to fit mobile */
-  footer {
-    font-size: 10px;
-    text-align: center;
-  }
-
   /* adjust font and padding for mobile idea page */
   .message {
     font-size: 18px;
@@ -198,6 +192,12 @@ img {
     padding-bottom: 30px;
     max-width: 60%;
   }
+
+  /* shrink footer to fit mobile */
+  footer {
+    font-size: 10px;
+    text-align: center;
+  }
 }
 
 /* styles and media queries for screens smaller than 480px */
@@ -212,10 +212,90 @@ img {
     padding: 10px;
   }
 
+   /* adjust button width */
+   button {
+    width: 100%;
+  }
+
   /* resize logo */
   .logo {
     font-size: 24px;
   }
 
   /* do not display home button */
-  .
+  .home-btn {
+    display: none;
+  }
+
+  /* shrink dropdown button */
+  .dropdown-menu {
+    display: block;
+  }
+
+  /* shrink dark mode for mobile */
+  #dark-mode {
+    padding: 6px;
+    margin: 0;
+    margin-top: 10px;
+    position: absolute;
+    align-items: center;
+  }
+
+  #dark-mode svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+
+  /* shrink search bar */
+  #search {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  /* shrink input */
+  input {
+    font-size: 16px;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  /* shrink filter options */
+  #search-type,
+  #genre-select {
+    font-size: 12px;
+  }
+
+  /* shrink song info tiles */
+  .song-info h2 {
+    font-size: 18px;
+  }
+
+  .song-info p,
+  .song-bpm p,
+  .message p {
+    font-size: 14px;
+  }
+
+  /* add more padding to the song cards */
+  .song-card
+  .message p {
+    padding: 15px;
+  }
+
+  /* resize meet the team text */
+  .meet-the-team {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* resize picture, convert to columns for mobile optimization */
+  .temp_pic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    max-width: 40%;
+  }
+}
