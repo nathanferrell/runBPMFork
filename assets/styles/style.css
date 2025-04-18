@@ -1,16 +1,19 @@
 :root { /*standard-light mode */
-  --background-color: #ffffff;
+  --background-color: #fdfdfd;
   --primary-color: #E88137;
   --text-color: black;
   --secondary-color: #eee;
+  --accent-color: #ddd;
+  --hover-color: #ddd;
 }
 
 .dark-mode {
   --background-color: #2d2d2d;
   --primary-color: #E88137;
-  --text-color: #ffffff;
-  --secondary-color: #414141;
+  --text-color: #efefef;
+  --secondary-color: #000;
   --accent-color: #eee;
+  --hover-color: #444;
 }
 
 header {
@@ -19,7 +22,7 @@ header {
   align-items: center;
   background-color: var(--secondary-color);
   text-align: center;
-  width: 98%;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -63,8 +66,20 @@ header {
 }
 
 #dark-mode {
-  font-size: 20px;
+  font-size: 10px;
   border-radius: 50%;
+  width: 30px;    
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  color: var(--text-color);
+}
+
+#dark-mode p {
+  color: var(--secondary-color)
 }
 
 /* general body styles */
@@ -122,7 +137,8 @@ nav > *:not(.dropdown-content) {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
+  color: var(--text-color);
   min-width: 180px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 9999;
@@ -141,7 +157,7 @@ nav > *:not(.dropdown-content) {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: var(--hover-color);
 }
 
 .dropdown-menu:hover + .dropdown-content {
@@ -165,22 +181,6 @@ nav > .dropdown-menu:hover + .dropdown-content {
   display: block;
 }
 
-/* media query to show menu on smaller screens */
-@media (max-width: 768px) {
-  .dropdown-menu {
-    display: block;
-  }
-
-  nav {
-    justify-content: flex-end;
-  }
-
-  .home-btn {
-    display: none;
-  }
-}
-
-
 /* general h3 styles */
 h3 {
   color: #000;
@@ -191,6 +191,17 @@ h3 {
   font-weight: 400;
   line-height: 80%;
   margin-top: -60px;
+}
+
+h4 {
+  color: black;
+  text-align: center;
+  font-family: sans-serif, "Times New Roman", Tahoma;
+  font-size: 30px;
+  text-decoration: dotted;
+  line-height: 80%;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .recommended-songs {
@@ -216,6 +227,12 @@ h3 {
   padding: 20px;
   width: 100%;
   max-width: 900px;
+}
+
+/* changing background and text color for song cards in dark mode */
+.dark-mode .song-card {
+  color: #c9c9c9;
+  background-color: #2f195e;
 }
 
 .song-info {
@@ -319,9 +336,8 @@ h3 {
   text-align: center;
   font-family: sans-serif, "Times New Roman", Tahoma;
   font-size: 22px;
-  padding-left: 200px;
-  padding-right: 200px;
-
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 .text {
@@ -332,10 +348,10 @@ h3 {
 }
 
 .about {
+  display: flex;
   color: #464343;
   font-family: sans-serif, "Times New Roman", Tahoma;
   font-size: 18px;
-
 }
 
 /* general button styles */
@@ -368,7 +384,7 @@ button:hover {
 
 .temp_pic {
   display: flex;
-  padding-left: 375px;
+  align-items: center;
   padding-bottom: 25px;
 }
 
@@ -383,17 +399,6 @@ input {
   font-size: 19px;
 }
 
-.message h4 {
-  color: black;
-  text-align: center;
-  font-family: sans-serif, "Times New Roman", Tahoma;
-  font-size: 30px;
-  text-decoration: dotted;
-  line-height: 80%;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
 .message p {
   font-size: 20px;
   text-align: center;
@@ -406,9 +411,11 @@ input {
 }
 
 footer {
-    position: bottom;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-    font-size: 60%;
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 60%;
+  padding: 10px 0;
 }
