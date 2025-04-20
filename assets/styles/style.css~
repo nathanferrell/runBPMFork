@@ -276,19 +276,17 @@ nav > *:not(.dropdown-content) {
   text-align: center;
 }
 
-.song-list {
+..song-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 10px;
   justify-content: center;
-  margin-bottom: 10px;
   align-items: center;
-  width: 100%;
 }
+
 
 .song-card {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: #b5aec4;
