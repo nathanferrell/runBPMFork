@@ -68,32 +68,36 @@ img {
 /* styles and media queries for screens smaller than 768px (mobile ideal) */
 @media (max-width: 768px) {
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap; /* Force horizontal layout */
-    padding: 5px 20px;
-    height: 60px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 5px 20px;
+  height: 60px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 
   .logo-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    text-align: center;
-  }
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  flex: 1;
+}
+
 
   .home-btn {
     display: inline;
   }
 
-  nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-  }
+ 
 
   .dropdown {
     margin-right: 10px;
