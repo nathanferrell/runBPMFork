@@ -104,11 +104,33 @@ header {
   z-index: 999;
 }
 
-.logo-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-55%);
+@media (max-width: 768px) {
+  .logo-container {
+    position: static;
+    transform: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  #dark-mode {
+    position: static;
+    margin: 10px 0;
+  }
 }
+
 
 .logo {
   font-style: italic;
@@ -276,14 +298,15 @@ nav > *:not(.dropdown-content) {
   text-align: center;
 }
 
-..song-list {
+.song-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: center;
+  margin-bottom: 10px;
   align-items: center;
+  width: 100%;
 }
-
 
 .song-card {
   display: flex;

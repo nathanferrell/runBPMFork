@@ -67,63 +67,64 @@ img {
 
 /* styles and media queries for screens smaller than 768px (mobile ideal) */
 @media (max-width: 768px) {
+  /* adjust header layout for smaller viewports */
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; /* Force horizontal layout */
-    padding: 5px 20px;
-    height: 60px;
+    flex-wrap: wrap;
+    padding: 10px;
   }
 
+  /* sets logo to be in the absolute center as needed */
   .logo-container {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    margin: 0;
     text-align: center;
+    margin: 0;
   }
 
-  .home-btn {
-    display: inline;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .dropdown {
-    margin-right: 10px;
-  }
-
-  #dark-mode {
-    position: relative;
-    margin-left: auto;
-  }
-
+  /* shrink logo size to fit smaller viewports */
   .logo {
     font-size: 32px;
   }
 
+  /* fix button size */
   button {
     font-size: 20px;
     padding: 8px 16px;
     margin: 10px;
   }
 
+  /* stacking button options vertically with spacing - NEEDED FOR MOBILE SPACING */
   .button-container {
     flex-direction: column;
     gap: 10px;
   }
 
+  /* show nav items in horizontal row */
+  nav {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* flatten dropdown down */
   .dropdown-content {
     position: absolute;
     box-shadow: none;
   }
 
+  /* setting position for dark mode */
+  #dark-mode {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  /* ensure search bar and filters are more responsive on mobile  */
   #search-container {
     display: flex;
     flex-wrap: wrap;
@@ -133,6 +134,7 @@ img {
     max-width: 100%;
   }
 
+  /* improve mobile usability - fix widths, padding, border sizing, etc. */
   #search-input {
     width: 100%;
     max-width: 750px;
@@ -146,6 +148,7 @@ img {
     flex-shrink: 1;
   }
 
+  /* stacking filter options vertically with spacing - NEEDED FOR MOBILE SPACING */
   #filter-container {
     flex-direction: column;
     gap: 10px;
@@ -153,6 +156,7 @@ img {
     padding: 0 10px;
   }
 
+  /* adjust font and padding for mobile idea page */
   .message {
     font-size: 18px;
     padding-left: 15px;
@@ -162,7 +166,7 @@ img {
   .message p {
     font-size: 16px;
     padding: 12px;
-    width: 100%;
+    width: 100%; 
     align-content: center;
   }
 
@@ -179,6 +183,7 @@ img {
     justify-content: center;
   }
 
+  /* resize picture, convert to columns for mobile optimization */
   .temp_pic {
     display: flex;
     flex-direction: column;
@@ -188,6 +193,7 @@ img {
     max-width: 60%;
   }
 
+  /* shrink footer to fit mobile */
   footer {
     font-size: 10px;
     text-align: center;
@@ -198,61 +204,69 @@ img {
 @media (max-width: 480px) {
 
   header {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    padding: 10px 15px;
-    height: 60px;
+    flex-wrap: wrap;
+    padding: 10px;
   }
 
-  button {
-    width: auto;
+   /* adjust button width */
+   button {
+    width: 100%;
   }
 
+  /* resize logo */
   .logo {
     font-size: 24px;
   }
 
+  /* do not display home button */
   .home-btn {
-    display: inline;
+    display: none;
   }
 
+  /* shrink dropdown button */
   .dropdown-menu {
     display: block;
   }
 
+  /* shrink dark mode for mobile */
   #dark-mode {
     padding: 6px;
     margin: 0;
-    margin-left: auto;
-    position: relative;
+    margin-top: 10px;
+    position: absolute;
     align-items: center;
   }
 
   #dark-mode svg {
     width: 20px;
     height: 20px;
-    position: static;
+    position: absolute;
   }
 
+  /* shrink search bar */
   #search {
     font-size: 16px;
     margin-left: 0;
   }
 
+  /* shrink input */
   input {
     font-size: 16px;
     height: auto;
     margin: 10px 0;
   }
 
+  /* shrink filter options */
   #search-type,
   #genre-select {
     font-size: 12px;
   }
 
+  /* shrink song info tiles */
   .song-info h2 {
     font-size: 18px;
   }
@@ -263,16 +277,19 @@ img {
     font-size: 14px;
   }
 
-  .song-card,
+  /* add more padding to the song cards */
+  .song-card
   .message p {
     padding: 15px;
   }
 
+  /* resize meet the team text */
   .meet-the-team {
     padding: 10px;
     font-size: 14px;
   }
 
+  /* resize picture, convert to columns for mobile optimization */
   .temp_pic {
     display: flex;
     flex-direction: column;
@@ -282,4 +299,3 @@ img {
     max-width: 40%;
   }
 }
-
