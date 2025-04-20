@@ -69,7 +69,7 @@ img {
     gap: 10px;
   }
  .home-btn {
-  display: none;
+  display: inline;
   white-space: nowrap;
 }
 
