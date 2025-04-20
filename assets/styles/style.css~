@@ -288,6 +288,7 @@ nav > *:not(.dropdown-content) {
 
 .song-card {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: #b5aec4;
