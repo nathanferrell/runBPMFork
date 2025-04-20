@@ -4,7 +4,7 @@
   max-width: 100%;
 }
 
-/* base scale for any images*/
+/* base scale for any images */
 img {
   max-width: 100%;
   height: auto;
@@ -14,32 +14,27 @@ img {
 /* styles and media queries for screens smaller than 1024px */
 @media (max-width: 1024px) {
 
-  /* hides home button on smaller screen */
   .home-btn {
     display: none;
   }
 
-  /* shrink input width */
   input {
     width: 90%;
     margin-left: 0;
   }
 
-  /* aligns items in song card as left-hand columns */
   .song-card {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
   }
 
-  /* ensure bpm element spans full width with a left align and top margins */
   .song-bpm {
     width: 100%;
     text-align: left;
     margin-top: 10px;
   }
 
-  /* adjust font and padding for mobile idea page */
   .message {
     font-size: 20px;
     padding-left: 20px;
@@ -58,34 +53,40 @@ img {
     width: 95%;
   }
 
-  /* resize picture */
   .temp_pic {
     padding-left: 10px;
     max-width: 80%;
   }
 }
 
-/* styles and media queries for screens smaller than 768px (mobile ideal) */
+/* styles and media queries for screens smaller than 768px */
 @media (max-width: 768px) {
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; /* Force horizontal layout */
-    padding: 5px 20px;
+    flex-wrap: nowrap;
+    padding: 5px 15px;
     height: 60px;
+    gap: 10px;
   }
 
-  .logo-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  .left-zone,
+  .right-zone {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .center-zone {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 28px;
     margin: 0;
-    text-align: center;
-  }
-
-  .home-btn {
-    display: inline;
   }
 
   nav {
@@ -93,19 +94,20 @@ img {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .home-btn {
+    display: inline;
   }
 
   .dropdown {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   #dark-mode {
     position: relative;
     margin-left: auto;
-  }
-
-  .logo {
-    font-size: 32px;
   }
 
   button {
@@ -198,17 +200,14 @@ img {
 @media (max-width: 480px) {
 
   header {
-    flex-direction: row;
-    align-items: center;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: nowrap;
     padding: 10px 15px;
     height: 60px;
-  }
-
-  button {
-    width: auto;
+    gap: 10px;
   }
 
   .logo {
